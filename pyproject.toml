@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Second project from Hexlet's Python course"
+authors = ["Dmitrii Sushkov <python.cat.dev@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.3"
+pytest-cov = "^4.0.0"
+flake8 = "^5.0.4"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff_script:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
