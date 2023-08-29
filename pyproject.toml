@@ -3,6 +3,9 @@ name = "hexlet-code"
 version = "0.1.0"
 description = "Second project from Hexlet's Python course"
 authors = ["Dmitrii Sushkov <python.cat.dev@gmail.com>"]
+packages = [
+    { include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
