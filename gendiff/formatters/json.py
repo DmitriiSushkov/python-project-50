@@ -1,16 +1,5 @@
-#!/usr/bin/env python3
-
-import json as js
+import json as json_global
 
 
-def json(data):
-    result = js.dumps(data, indent=4)
-    return result
-
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    main()
+def render_json(diff) -> str:
+    return json_global.dumps(diff)
