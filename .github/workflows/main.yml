@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
@@ -22,7 +22,7 @@ jobs:
       - name: Code Coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ e0101b8d26149b9411fdd8e372ba12bd89cb8b061f150d32dddb113a12fd3495 }}
         with:
           coverageCommand: make test-coverage
           debug: true
