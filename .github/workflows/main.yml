@@ -19,6 +19,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
         # make depends on poetry
       - name: Install Pytest
+        run: |
+          pip install -U pytest
       - name: Install dependencies
         run: |
           pip install poetry
