@@ -1,8 +1,8 @@
-import pytest
-
-
 from gendiff import generate_diff
 from tests import get_path
+
+
+import pytest
 
 
 @pytest.mark.parametrize(
