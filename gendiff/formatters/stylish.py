@@ -4,21 +4,22 @@ DEFAULT_INDENT = 4
 
 
 def to_str(value: Any, depth: int) -> str:
+    indent = ' ' * depth
     if isinstance(value, dict):
         lines = ['{']
         for key, nested_value in value.items():
             if isinstance(nested_value, dict):
                 new_value = to_str(nested_value, depth + DEFAULT_INDENT)
-                lines.append(f"{' ' * depth}    {key}: {new_value}")
+                lines.append(f"{indent}    {key}: {new_value}")
             else:
-                lines.append(f"{' ' * depth}    {key}: {nested_value}")
-        lines.append(f'{" " * depth}}}')
+                lines.append(f"{indent}    {key}: {nested_value}")
+        lines.append(f'{indent}}}')
         return '\n'.join(lines)
     if isinstance(value, bool):
         return str(value).lower()
     if value is None:
         return 'null'
-    return value
+    return str(value)
 
 
 def line_forming(dictionary: dict, key: Any, depth: int, sign: str) -> str:

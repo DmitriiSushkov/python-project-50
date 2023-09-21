@@ -17,6 +17,22 @@
 
 Запускается из командной строки и вычисляет отличия между двумя файлами. На данный момент работает с JSON и YAML.
 
+**Установка**
+Через клонирование репозитория
+```
+$ git clone git@github.com:kazyamov/python-project-50.git
+```
+And install dependencies
+```
+$ make install
+```
+
+or
+
+```
+$ poetry install
+```
+
 **Запуск справки:**
 
 `gendiff -h`
